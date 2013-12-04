@@ -20,6 +20,23 @@
 	define('SMCASWPURL', plugin_dir_url(__FILE__)); // Plugin URI @since 0.0.1
 
 	new addSearchWP;
-	class addSearchWP{
-		public function __construct(){}
+/*
+ * Main addSearchWP class
+ * */
+	class addSearchWP{ public function __construct(){} }
+/*
+ * Widgets addSearchWP class
+ * */
+	$smcaddsearchadmin = new SmcAddsearchWPadmin;
+	class SmcAddsearchWPadmin extends addSearchWP{
+		public function __construct () {
+			parent::__construct();
+			add_action( 'admin_menu', array( &$this, 'admin_menu' ));
+		}
+		/*
+		 * Option menu page
+		 * */
+		public function admin_menu(){
+			// ...
+		}
 	}
