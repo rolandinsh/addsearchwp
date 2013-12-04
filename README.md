@@ -1,0 +1,4 @@
+addsearchwp
+===========
+
+AddSearch for WordPress
